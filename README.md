@@ -19,7 +19,7 @@ npm run dev
 npm run build
 ```
 
-产物在 `dist/`。`vite.config.js` 已设置 `base: './'`，方便之后发布到 GitHub Pages。
+产物在 `dist/`。`vite.config.js` 已设置 `base: './'`，方便发布到 GitHub Pages。
 
 预览构建结果：
 
@@ -27,17 +27,18 @@ npm run build
 npm run preview
 ```
 
-## 发布到 GitHub
+## GitHub Pages 自动部署
 
-1. 在本目录执行 `git init`
-2. 到 GitHub 新建仓库
-3. 提交并推送：
+推送到 `master` 或 `main` 后，GitHub Actions 会自动构建并发布 Pages。
 
-```bash
-git add .
-git commit -m "feat: 天猫 goToUrl 解码替换工具"
-git remote add origin https://github.com/<你的用户名>/<仓库名>.git
-git push -u origin main
+第一次需要在仓库里打开一次 Pages：
+
+1. 打开 GitHub 仓库 **Settings → Pages**
+2. **Source** 选择 **GitHub Actions**
+3. 推送代码，或到 **Actions** 里手动跑一次 `Deploy GitHub Pages`
+
+发布成功后地址一般是：
+
+```text
+https://<你的用户名>.github.io/<仓库名>/
 ```
-
-如果要用 GitHub Pages，把 Pages 的 Source 设为 `GitHub Actions` 或把 `dist` 发布到 `gh-pages` 分支即可。
