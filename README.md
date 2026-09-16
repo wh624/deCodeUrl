@@ -13,20 +13,6 @@ npm run dev
 
 浏览器打开终端里提示的本地地址即可。
 
-## 构建
-
-```bash
-npm run build
-```
-
-产物在 `dist/`。`vite.config.js` 已设置 `base: './'`，方便发布到 GitHub Pages。
-
-预览构建结果：
-
-```bash
-npm run preview
-```
-
 ## GitHub Pages 自动部署
 
 推送到 `master` 或 `main` 后，GitHub Actions 会自动构建并发布 Pages。
