@@ -6,8 +6,6 @@
   --paper: #fffdf8;
   --accent: #c45c26;
   --accent-ink: #fff8f1;
-  --ok: #2f6b4f;
-  --err: #a33b2b;
   --shadow: 0 18px 40px rgba(48, 36, 20, 0.08);
 }
 
@@ -32,44 +30,18 @@ body {
 }
 
 .page {
-  width: min(1080px, calc(100% - 32px));
+  width: min(720px, calc(100% - 32px));
   margin: 32px auto 48px;
 }
 
 .hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 16px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 h1 {
-  margin: 0 0 6px;
+  margin: 0;
   font-size: 28px;
   letter-spacing: 0.02em;
-}
-
-.sub {
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.6;
-}
-
-.badge {
-  flex: none;
-  padding: 6px 10px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--paper);
-  color: var(--muted);
-  font-size: 12px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 18px;
 }
 
 .card {
@@ -78,6 +50,12 @@ h1 {
   border-radius: 18px;
   box-shadow: var(--shadow);
   padding: 20px;
+}
+
+.hint-top {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 14px;
 }
 
 label {
@@ -99,7 +77,7 @@ input[type="text"] {
 }
 
 textarea {
-  min-height: 132px;
+  min-height: 150px;
   resize: vertical;
   overflow-wrap: anywhere;
 }
@@ -114,14 +92,18 @@ input[type="text"]:focus {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
-  margin-top: 14px;
 }
 
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 14px;
+.output {
+  margin: 20px 0 16px;
+}
+
+.output-box {
+  position: relative;
+}
+
+.output-box textarea {
+  padding-right: 88px;
 }
 
 button {
@@ -135,39 +117,6 @@ button {
 .primary {
   background: var(--accent);
   color: var(--accent-ink);
-}
-
-.ghost {
-  background: #efe7da;
-  color: var(--ink);
-}
-
-.meta {
-  margin: 10px 0 0;
-  min-height: 22px;
-  color: var(--muted);
-  font-size: 13px;
-}
-
-.meta.error {
-  color: var(--err);
-}
-
-.meta.ok {
-  color: var(--ok);
-}
-
-.decoded {
-  margin-top: 14px;
-}
-
-.output-box {
-  position: relative;
-}
-
-.output-box textarea {
-  min-height: 150px;
-  padding-right: 88px;
 }
 
 .copy {
@@ -190,27 +139,8 @@ button {
   display: block;
 }
 
-.hint {
-  margin: 10px 0 0;
-  color: var(--muted);
-  font-size: 12px;
-  text-align: center;
-}
-
-@media (max-width: 860px) {
-  .grid,
-  .row,
-  .hero {
+@media (max-width: 640px) {
+  .row {
     grid-template-columns: 1fr;
-    display: block;
-  }
-
-  .hero {
-    margin-bottom: 18px;
-  }
-
-  .badge {
-    display: inline-block;
-    margin-top: 10px;
   }
 }
