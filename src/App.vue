@@ -7,7 +7,7 @@ const { itemId, skuId, output, copyHint, qrSrc, outputEl, copyOutput } = useDeco
 <template>
   <main class="page">
     <header class="hero">
-      <h1>goToUrl 链接替换</h1>
+      <h1>goToUrl 链接解析</h1>
     </header>
 
     <section class="card">
