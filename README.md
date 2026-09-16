@@ -20,4 +20,5 @@ pnpm build
 地址：https://wh624.github.io/deCodeUrl/
 
 仓库 **Settings → Pages → Source** 必须选 **GitHub Actions**。
-如果选成 Deploy from a branch，线上会直接发布未构建的 `index.html`，页面会空白，并出现 `/src/main.js` 404。
+
+不要使用 GitHub 自动生成的 `static.yml`（Deploy static content）。那个工作流会把未构建的源码直接发布出去，页面会空白并出现 `/src/main.js` 404。
