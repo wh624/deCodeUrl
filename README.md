@@ -1,6 +1,6 @@
-# goToUrl 解码替换
+# deCodeUrl
 
-把天猫 `alipay-login?goToUrl=` 链接循环 `decodeURIComponent` 直到完全解密，修改 `itemId` / `skuId` 后再 `encodeURIComponent` 两次拼回去。支持复制新链接，并生成可扫码的二维码。
+链接解析。把天猫 `alipay-login?goToUrl=` 链接循环 `decodeURIComponent` 直到完全解密，修改 `itemId` / `skuId` 后再 `encodeURIComponent` 两次拼回去。支持复制新链接，并生成可扫码的二维码。
 
 链接只在浏览器本地处理，不会上传。
 
@@ -37,8 +37,8 @@ npm run preview
 2. **Source** 选择 **GitHub Actions**
 3. 推送代码，或到 **Actions** 里手动跑一次 `Deploy GitHub Pages`
 
-发布成功后地址一般是：
+发布成功后地址：
 
 ```text
-https://<你的用户名>.github.io/<仓库名>/
+https://wh624.github.io/deCodeUrl/
 ```
